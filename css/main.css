@@ -227,12 +227,14 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    
 }
 
 .hero-bg {
     position: absolute;
     max-width: 100%; /* Giới hạn chiều rộng tối đa bằng chiều rộng của phần tử cha */
-    height: auto;    /* Chiều cao sẽ tự động điều chỉnh để giữ đúng tỷ lệ ảnh */
+    height: auto;
+    margin-top: -15%;    /* Chiều cao sẽ tự động điều chỉnh để giữ đúng tỷ lệ ảnh */
 }
 
 .hero-image {
@@ -322,8 +324,12 @@ section {
 
 .features {
     background-color: var(--gray-50);
+    margin-top: -15%;
 }
 
+.features-content {
+    margin: 0 auto;
+}
 .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
