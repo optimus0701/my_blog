@@ -351,7 +351,7 @@ section {
     padding-left: var(--spacing-xl);
     position: relative;
     font-weight: 500;
-    color: var(--gray-700);
+    color: white;
 }
 
 .features-list li::before {
@@ -549,6 +549,10 @@ section {
 .floor-plans-description h3 {
     color: var(--primary-color);
     margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+}
+
+.floor-plans-description p {
+    color: white;
 }
 
 .apartment-types {
