@@ -259,6 +259,7 @@
     overflow-y: auto;
     box-shadow: var(--shadow-xl);
     animation: modalSlideIn 0.3s ease;
+    
 }
 
 @keyframes modalSlideIn {

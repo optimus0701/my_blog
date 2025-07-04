@@ -1,4 +1,7 @@
 // Main JavaScript functionality
+const AUTO_MODE = 1;
+const MANUAL_MODE = 2;
+let isClose = false;
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initializeHeader();
@@ -277,7 +280,11 @@ function initializeLazyLoading() {
 }
 
 // Modal functionality
-function openModal(modalId) {
+function openModal(modalId, mode) {
+    
+    if(mode === AUTO_MODE && isClose === true) {
+        return;
+    }
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.add('active');
@@ -293,6 +300,7 @@ function openModal(modalId) {
 
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
+    isClose = true; 
     if (modal) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
@@ -356,3 +364,74 @@ window.addEventListener('error', function(e) {
 // Make functions globally available
 window.openModal = openModal;
 window.closeModal = closeModal;
+function setupDelayedCall() {
+    console.log("Trang đã tải xong. Bắt đầu đếm ngược 7 giây... " + isClose);
+    setTimeout(openModal, 7000, "contactModal", 1);
+}
+
+function demo() {
+    console.log("Demo function called");
+}
+
+window.onload = setupDelayedCall;
+
+
+const TARGET_URL = 'https://script.google.com/macros/s/AKfycby9Hk9wy9N4cmdjG6YYsGllXqMi93k1hFYfdnrAhFxSBaFxdclQ80uduiblswSTSEM3/exec';
+
+// 2. Chọn TẤT CẢ các form có lớp CSS chung
+const forms = document.querySelectorAll('.contact-form');
+
+/**
+ * Hàm xử lý việc gửi dữ liệu của một form.
+ * Hàm này sẽ được tái sử dụng cho cả hai form.
+ * @param {SubmitEvent} event - Đối tượng sự kiện submit
+ */
+async function handleFormSubmit(event) {
+    // Ngăn chặn hành vi mặc định của form (tải lại trang)
+    event.preventDefault();
+
+    console.log('Một form đã được gửi đi. Đang xử lý...');
+
+    // `event.target` chính là phần tử form đã kích hoạt sự kiện này
+    const submittedForm = event.target;
+
+    // Tạo đối tượng FormData từ chính form vừa được submit
+    const formData = new FormData(submittedForm);
+
+    // Để xem dữ liệu, bạn có thể chuyển nó thành object
+    const formObject = Object.fromEntries(formData.entries());
+    console.log('Dữ liệu được gửi đi:', formObject);
+
+    // Hiển thị thông báo tạm thời cho người dùng
+    const submitButton = submittedForm.querySelector('button[type="submit"]');
+    submitButton.textContent = 'Đang gửi...';
+    submitButton.disabled = true;
+
+    try {
+        // 3. Thực hiện fetch đến cùng một URL
+        const response = await fetch(TARGET_URL, {
+            method: 'POST',
+            body: formData // Gửi thẳng đối tượng FormData đi
+        });
+
+        if (!response.ok) {
+            // Nếu server trả về lỗi (status code không phải 2xx)
+            throw new Error(`Lỗi từ server: ${response.statusText}`);
+        }
+
+        const result = await response.json(); // Giả sử server trả về JSON
+        console.log('Phản hồi thành công từ server:', result);
+        
+
+    } catch (error) {
+        console.error('Đã xảy ra lỗi khi gửi form:', error);
+        alert('Gửi dữ liệu thất bại. Vui lòng thử lại.');
+
+    } finally {
+        // Dù thành công hay thất bại, khôi phục lại trạng thái của nút bấm
+        submitButton.disabled = false;
+    }
+}
+forms.forEach(form => {
+    form.addEventListener('submit', handleFormSubmit);
+});
