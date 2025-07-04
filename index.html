@@ -1,223 +1,493 @@
-<!DOCTYPE HTML>
-<!--
-	Horizons by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-    <title>ZyDoo's Blog</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="robots"
-        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script><noscript>
-        <link rel="stylesheet" href="css/skel.css">
-        <link rel="stylesheet" href="css/style.css">
-    </noscript><!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LONG BIEN CENTRAL - Dự án mang dấu ấn riêng biệt</title>
+    <meta name="description" content="LONG BIEN CENTRAL – DỰ án mang dấu ấn riêng biệt, vị trí vàng, tiện ích 5 sao, thiết kế hiện đại, sinh lời bền vững cho nhà đầu tư.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="homepage">
+<body>
     <!-- Header -->
-    <div id="header">
+    <header class="header" id="header">
         <div class="container">
-            <!-- Logo -->
-            <h1><a href="#" id="logo">I'm Vi Van Do</a></h1>
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>
-                        <a href="">Game</a>
-                        <ul>
-                            <li><a href="#">Matr1x Fire</a></li>
-                            <li><a href="#">Cs Go Mobile</a></li>
-                            <!-- <li>
-                                <a href="">Phasellus consequat</a>
-                                <ul>
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Phasellus consequat</a></li>
-                                    <li><a href="#">Magna phasellus</a></li>
-                                    <li><a href="#">Etiam dolore nisl</a></li>
-                                    <li><a href="#">Veroeros feugiat</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Veroeros feugiat</a></li> -->
-                        </ul>
-                    </li>
-                    <li><a href="left-sidebar.html">Contacts</a></li>
-                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                    <li><a href="no-sidebar.html">No Sidebar</a></li>
-                </ul>
-            </nav><!-- Banner -->
-            <div id="banner">
-                <div class="container">
-                    <section>
-                        <header class="major">
-                            <h2>Welcome to My Blog</h2>
-                            <span class="byline">Don't forget to follow my <a
-                                    href="http://templated.co">TIKTOK</a> and subcribe my <a
-                                    href="http://templated.co/license">Youtube Channel</a> to update new information!</span>
-                        </header><a href="#" class="button alt">Sign Up</a>
-                    </section>
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Taseco Land" class="logo-img">
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#tong-quan" class="nav-link">Tổng quan</a></li>
+                        <li><a href="#vi-tri" class="nav-link">Vị trí</a></li>
+                        <li><a href="#mat-bang" class="nav-link">Mặt bằng</a></li>
+                        <li><a href="#hinh-anh" class="nav-link">Hình ảnh</a></li>
+                        <li><a href="#lien-he" class="nav-link">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="images/hero_bg.png" alt="The Matrix One Premium" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">LONG BIEN CENTRAL</span>
+                    <span class="subtitle">Vị Trí Độc Tôn, Tiện Ích Đẳng Cấp</span>
+                </h1>
+                <p class="hero-description">
+                    CƠ HỘI SỞ HỮU CĂN HỘ LONG BIEN CENTRAL ĐẲNG CẤP GIÁ TỪ 100 TRIỆU
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" onclick="openModal('contactModal')">
+                        Nhận bảng giá chi tiết
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Featured -->
-    <div class="wrapper style2">
-        <section class="container">
-            <header class="major">
-                <h2>NEWS</h2>
-                <span class="byline">some news about game and something...</span>
-            </header>
-            <div class="row no-collapse-1">
-                <section class="4u"><a href="#" class="image feature"><img
-                            src="images/pic02.jpg" alt="" width="368"
-                            height="180"></a>
-                    <p>Matr1x Fire open Alpha test for all player around the world!</p>
-                </section>
-                <section class="4u"><a href="#" class="image feature"><img
-                            src="images/pic03.jpg" alt="" width="368"
-                            height="180"></a>
-                    <p>New video on my tiktok</p>
-                </section>
-                <section class="4u"><a href="#" class="image feature"><img
-                            src="images/pic04.jpg" alt="" width="368"
-                            height="180"></a>
-                    <p>Curabitur sem urna, consequat vel, suscipit convallis sem
-                        leo, mattis placerat, nulla. Sed ac leo.</p>
-                </section>
-            </div>
-        </section>
-    </div>
-    <!-- Main -->
-    <div id="main" class="wrapper style1">
-        <section class="container">
-            <header class="major">
-                <h2>Nulla luctus eleifend</h2>
-                <span class="byline">Mauris vulputate dolor sit amet nibh</span>
-            </header>
-            <div class="row">
-                <!-- Content -->
-                <div class="6u">
-                    <section>
-                        <ul class="style">
-                            <li>
-                                <span class="fa fa-wrench"></span>
-                                <h3>Integer ultrices</h3>
-                                <span>In posuere eleifend odio. Quisque semper
-                                    augue mattis wisi. Maecenas ligula.
-                                    Pellentesque viverra vulputate enim.</span>
-                            </li>
-                            <li>
-                                <span class="fa fa-cloud"></span>
-                                <h3>Aliquam luctus</h3>
-                                <span>Pellentesque viverra vulputate enim.
-                                    Aliquam erat volutpat. Maecenas condimentum
-                                    enim tincidunt risus accumsan.</span>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="6u">
-                    <section>
-                        <ul class="style">
-                            <li>
-                                <span class="fa fa-cogs"></span>
-                                <h3>Integer ultrices</h3>
-                                <span>In posuere eleifend odio. Quisque semper
-                                    augue mattis wisi. Maecenas ligula.
-                                    Pellentesque viverra vulputate enim.</span>
-                            </li>
-                            <li>
-                                <span class="fa fa-leaf"></span>
-                                <h3>Aliquam luctus</h3>
-                                <span>Pellentesque viverra vulputate enim.
-                                    Aliquam erat volutpat. Maecenas condimentum
-                                    enim tincidunt risus accumsan.</span>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- Footer -->
-    <div id="footer">
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
         <div class="container">
-            <!-- Lists -->
-            <div class="row">
-                <div class="8u">
-                    <section>
-                        <header class="major">
-                            <h2>Donec dictum metus</h2>
-                            <span class="byline">Quisque semper augue mattis
-                                wisi maecenas ligula</span>
-                        </header>
-                        <div class="row">
-                            <section class="6u">
-                                <ul class="default">
-                                    <li><a href="#">Pellentesque elit non
-                                            gravida blandit.</a></li>
-                                    <li><a href="#">Lorem ipsum dolor
-                                            consectetuer elit.</a></li>
-                                    <li><a href="#">Phasellus nibh pellentesque
-                                            congue.</a></li>
-                                    <li><a href="#">Cras vitae metus aliquam
-                                            pharetra.</a></li>
-                                </ul>
-                            </section>
-                            <section class="6u">
-                                <ul class="default">
-                                    <li><a href="#">Pellentesque elit non
-                                            gravida blandit.</a></li>
-                                    <li><a href="#">Lorem ipsum dolor
-                                            consectetuer elit.</a></li>
-                                    <li><a href="#">Phasellus nibh pellentesque
-                                            congue.</a></li>
-                                    <li><a href="#">Cras vitae metus aliquam
-                                            pharetra.</a></li>
-                                </ul>
-                            </section>
+            <div class="features-grid">
+                <div class="features-content">
+                    <h2 class="section-title">CHÍNH SÁCH ƯU ĐÃI LONG BIEN CENTRAL</h2>
+                    <ul class="features-list">
+                        <li>Đặt cọc chỉ từ 100tr</li>
+                        <li>Thanh toán sớm chiết khấu lên đến 7%</li>
+                        <li>Giao dịch mua bán trực tiếp với chủ đầu tư</li>
+                        <li>Miễn phí dịch vụ 24 tháng</li>
+                        <li>Bàn giao nội thất nhập khẩu cao cấp</li>
+                        <li>Hỗ trợ vay ngân hàng 70% và miễn gốc lãi</li>
+                        
+                    </ul>
+                    <button class="btn btn-accent btn-large pulse" onclick="openModal('contactModal')">
+                        Nhận bảng giá chi tiết
+                    </button>
+                </div>
+                
+                <div class="contact-form-card">
+                    <h3 class="form-title">ĐĂNG KÝ NHẬN THÔNG TIN DỰ ÁN</h3>
+                    <p class="form-subtitle">BẢNG GIÁ QUỸ 20 CĂN ƯU ĐÃI RIÊNG TỪ CHỦ ĐẦU TƯ</p>
+                    <form class="contact-form" id="heroContactForm">
+                        <input type="text" name="name" placeholder="Họ và tên" required>
+                        <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                        <div class="form-group">
+                            <label for="apartment-type-hero">Loại hình quan tâm</label>
+                            <select name="apartment_type" id="apartment-type-hero" class="form-select" required>
+                                <option value="studio">Căn hộ 1PN</option>
+                                <option value="2br">Căn hộ 2PN</option>
+                                <option value="3br">Căn hộ 3PN</option>
+                                <option value="3br">Căn hộ 4PN</option>
+                                <option value="3br">Căn Penthouse</option>
+                            </select>
                         </div>
-                    </section>
-                </div>
-                <div class="4u">
-                    <section>
-                        <header class="major">
-                            <h2>Donec dictum metus</h2>
-                            <span class="byline">Mattis wisi maecenas
-                                ligula</span>
-                        </header>
-                        <ul class="contact">
-                            <li>
-                                <span class="address">Address</span>
-                                <span>1234 Somewhere Road #4285 <br>Nashville,
-                                    TN 00000</span>
-                            </li>
-                            <li>
-                                <span class="mail">Mail</span>
-                                <span><a
-                                        href="#">someone@untitled.tld</a></span>
-                            </li>
-                            <li>
-                                <span class="phone">Phone</span>
-                                <span>(000) 000-0000</span>
-                            </li>
-                        </ul>
-                    </section>
+                        <button type="submit" class="btn btn-primary btn-full">Nhận Thông Tin</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview" id="tong-quan">
+        <div class="container">
+            <h2 class="section-title text-center">TỔNG QUAN DỰ ÁN</h2>
+            
+            <div class="overview-image">
+                <img src="images/tienich1.jpeg" alt="Tổng quan dự án" class="img-responsive">
+            </div>
+            
+            <div class="overview-content">
+                <div class="overview-description">
+                    <p>Long Biên Central là tổ hợp căn hộ cao cấp mang dấu ấn riêng biệt, sở hữu vị trí đắc địa tại khu vực Việt Hưng, quận Long Biên, thành phố Hà Nội. Dự án được bao quanh bởi một hệ thống tiện ích ngoại khu và kết nối giao thông hoàn chỉnh, hứa hẹn là điểm đến an cư và đầu tư lý tưởng tại cửa ngõ phía Đông thủ đô.</p>
+                </div>
+                
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h4>Thông tin cơ bản</h4>
+                        <ul>
+                            <li>Tổng diện tích: 1,6ha</li>
+                            <li>Chủ đầu tư: Công ty Cổ phần Đầu tư Bất động sản Taseco</li>
+                            <li>Vị trí:  Việt Hưng, Long Biên, Hà Nội</li>
+                            <li>Dự kiến bàn giao: T9/2026</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="overview-item">
+                        <h4>Thiết kế và Xây dựng</h4>
+                        <ul>
+                            <li>Thiết kế: Jean Francois Milou</li>
+                            <li>Quy mô: 2 tầng hầm, 3 tầng đế, 9 tầng căn hộ</li>
+                            <li>Tổng sản phẩm: 422 căn hộ</li>
+                            <li>Sản phẩm: Căn hộ 1PN, 2PN, 3PN, 4PN, Penthouse</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="overview-image-bottom">
+                <img src="images/bg-2.png" alt="Phối cảnh dự án" class="img-responsive">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="vi-tri">
+        <div class="container">
+            <div class="location-header">
+                <button class="btn btn-accent" onclick="openModal('contactModal')">
+                    Đăng ký tư vấn ngay
+                </button>
+                <h2 class="section-title text-center">CĂN HỘ HẠNG SANG - TRÁI TIM LONG BIÊN</h2>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-description">
+                    <p>Dự án Long Biên Central tọa lạc tại vị trí chiến lược ở Việt Hưng, Long Biên. Vị trí này sở hữu kết nối giao thông vượt trội thông qua hệ thống cầu, cao tốc, vành đai và 2 tuyến metro tương lai. Cư dân được hưởng trọn vẹn hệ sinh thái tiện ích đẳng cấp chỉ trong vài phút di chuyển, bao gồm sân golf, trung tâm thương mại, bệnh viện hàng đầu, trường quốc tế và khu công nghệ cao, kiến tạo một cuộc sống tiện nghi, toàn diện.</p>
+                    <ul class="location-highlights">
+                        <li>Cách Sân bay quốc tế nội bài 20 phút</li>
+                        <li>Cách Cầu Trần Hưng Đạo 3 phút</li>
+                        <li>Cách Hồ Gươm 10 phút</li>
+                        <li>Ngay cạnh 3 Đại Siêu Thị và 5 trường học quốc tế</li>
+                    </ul>
+                </div>
+                
+                <div class="location-images">
+                    <img src="images/vitri1.png" alt="Vị trí dự án" class="img-responsive">
+                </div>
+            </div>
+            
+            <div class="location-maps">
+                <img src="images/vitri2.png" alt="Bản đồ vị trí" class="img-responsive">
+                <img src="images/vitri3.png" alt="Sơ đồ khu vực" class="img-responsive">
+            </div>
+            
+            <div class="location-cta">
+                <p>Dự án được bao quanh bởi hệ thống cầu kết nối hiện đại, các tuyến cao tốc, vành đai, quốc lộ và đặc biệt là 2 tuyến metro trong tương lai, giúp việc di chuyển vào trung tâm thành phố và các khu vực lân cận trở nên nhanh chóng và dễ dàng.</p>
+                <button class="btn btn-accent btn-large" onclick="openModal('contactModal')">
+                    Đăng ký tư vấn ngay
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities">
+        <div class="container">
+            <h2 class="section-title text-center">TIỆN ÍCH NỘI – NGOẠI<br>ĐẲNG CẤP</h2>
+            
+            <div class="amenities-description">
+                <p>Với mục tiêu kiến tạo một công trình mang dấu ấn riêng biệt, Chủ đầu tư Taseco mang đến dự án Long Biên Central với cam kết về một tiêu chuẩn sống đẳng cấp. Mỗi căn hộ tại đây đều được bàn giao với tiêu chuẩn nội thất hạng sang, đảm bảo mang lại cho cư dân một không gian sống tiện nghi, tinh tế và xứng tầm.</p>
+                
+                <p>Tọa lạc tại vị trí độc tôn, Long Biên Central mang đến cho cư dân một hệ sinh thái tiện ích ngoại khu toàn diện và đẳng cấp. Chỉ trong vài phút di chuyển là Sân Golf Long Biên, chuỗi 3 đại siêu thị - trung tâm thương mại, 5 trường học quốc tế và 3 bệnh viện hàng đầu, kiến tạo một môi trường sống tiện nghi, năng động và đáp ứng mọi nhu cầu từ giáo dục, y tế đến giải trí.</p>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <img src="images/tienich1.jpeg" alt="Tiện ích 1" class="amenity-image">
+                </div>
+                <div class="amenity-item">
+                    <img src="images/tienich2.png" alt="Bể bơi 4 mùa" class="amenity-image">
+                </div>
+                <div class="amenity-item">
+                    <img src="images/tienich3.jpg" alt="Phối cảnh" class="amenity-image">
+                </div>
+                <div class="amenity-item">
+                    <img src="images/tienich4.jpg" alt="Trung tâm thương mại" class="amenity-image">
+                </div>
+                <div class="amenity-item">
+                    <img src="images/tienich5.jpg" alt="Cổng chính" class="amenity-image">
+                </div>
+                <div class="amenity-item">
+                    <img src="images/tienich6.jpg" alt="Tiện ích nội khu" class="amenity-image">
+                </div>
+            </div>
+            
+            <div class="amenities-overview">
+                <p>Với kinh nghiệm nhiều năm của mình, Taseco tiếp tục mang đến LONG BIEN CENTRAL chuỗi hệ thống dịch vụ tiện ích cao cấp hơn, mang đến những trải nghiệm sống hoàn hảo hơn cho cư dân.</p>
+                
+                <img src="images/bg-3.png" alt="Tiện ích tổng thể" class="img-responsive">
+                
+                <div class="amenities-contact">
+                    <h3>LIÊN HỆ CHUYÊN VIÊN TƯ VẤN</h3>
+                    <div class="contact-form-card">
+                        
+                        <form class="contact-form" id="heroContactForm">
+                            <input type="text" name="name" placeholder="Họ và tên" required>
+                            <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                            <div class="form-group">
+                                <label for="apartment-type-hero">Loại hình quan tâm</label>
+                                <select name="apartment_type" id="apartment-type-hero" class="form-select" required>
+                                    <option value="studio">Căn hộ 1PN</option>
+                                    <option value="2br">Căn hộ 2PN</option>
+                                    <option value="3br">Căn hộ 3PN</option>
+                                    <option value="3br">Căn hộ 4PN</option>
+                                    <option value="3br">Căn Penthouse</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Nhận Thông Tin</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floor Plans Section -->
+    <section class="floor-plans" id="mat-bang">
+        <div class="container">
+            <h2 class="section-title text-center">MẶT BẰNG TỔNG THỂ</h2>
+            
+            <div class="floor-plans-description">
+                <p>Chủ đầu tư Taseco đã đầu tư rất kỹ lưỡng trong khâu thiết kế dự án Long Biên Central, cung cấp ra thị trường 422 sản phẩm với đa dạng loại hình và diện tích (Từ 1 – 4 phòng ngủ và Penthouse). Sự đa dạng này giúp dự án đáp ứng trọn vẹn các nhu cầu an cư và đầu tư cho nhiều đối tượng khách hàng khác nhau.</p>
+                
+                <p>Các căn hộ được thiết kế theo phong cách hiện đại, sang trọng, tối ưu hóa công năng sử dụng. Với mật độ xây dựng thấp và thiết kế tòa nhà thông minh, 100% căn hộ đều có ban công và cửa sổ lớn, đảm bảo không gian sống luôn tràn ngập ánh sáng tự nhiên và gió trời, loại bỏ hoàn toàn các góc chết hay phòng bí, mang lại cảm giác thoáng đãng.</p>
+                
+                <h3>THIẾT KẾ CHI TIẾT CĂN HỘ LONG BIEN CENTRAL</h3>
+                <ul class="apartment-types">
+                    <li>Căn hộ 1PN: 50m² – 57m²</li>
+                    <li>Căn hộ 2PN: 78m² – 80m²</li>
+                    <li>Căn hộ 3PN: 100m² – 107m²</li>
+                    <li>Căn hộ 4PN: 155m² – 165m²</li>
+                    <li>Căn Penthouse: 280m² – 376m²</li>
+                </ul>
+            </div>
+            
+            <div class="master-plan">
+                <img src="images/matbang1.jpg" alt="Mặt bằng tổng thể" class="img-responsive">
+            </div>
+            
+            <div class="building-plans">
+                <div class="building-plan">
+                    <img src="images/matbang2.jpg" alt="Tòa HH1" class="img-responsive">
+                </div>
+                <div class="building-plan">
+                    <img src="images/matbang3.jpg" alt="Tòa HH2" class="img-responsive">
+                </div>
+            </div>
+            
+            <div class="apartment-details">
+                <h3>THIẾT KẾ CHI TIẾT CĂN HỘ</h3>
+                <div class="tabs" id="apartmentTabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab-1br">CĂN HỘ 1 PN</button>
+                        <button class="tab-button" data-tab="tab-2br">CĂN HỘ 2 PN</button>
+                        <button class="tab-button" data-tab="tab-3br">CĂN HỘ 3 PN</button>
+                        <button class="tab-button" data-tab="tab-4br">CĂN HỘ 4 PN</button>
+                        <button class="tab-button" data-tab="tab-penthouse">CĂN PENTHOUSE</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="tab-1br">
+                            <img src="images/tab-1br.png" alt="Căn hộ 1 phòng ngủ" class="img-responsive">
+                        </div>
+                        <div class="tab-panel" id="tab-2br">
+                            <img src="images/tab-2br.png" alt="Căn hộ 2 phòng ngủ" class="img-responsive">
+                        </div>
+                        <div class="tab-panel" id="tab-3br">
+                            <img src="images/tab-3br.png" alt="Căn hộ 3 phòng ngủ" class="img-responsive">
+                        </div>
+                        <div class="tab-panel" id="tab-4br">
+                            <img src="images/tab-4br.png" alt="Căn hộ 4 phòng ngủ" class="img-responsive">
+                        </div>
+                        <div class="tab-panel" id="tab-penthouse">
+                            <img src="images/tab-3br.png" alt="Căn hộ Studio" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <img src="https://chungcuthematrixone.io.vn/wp-content/uploads/2024/12/z6116054823835_d3b159a82f3cdd92a43863147fe4ddcf.jpg" alt="CTA Background" class="cta-image">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <i class="icon-comments"></i>
+                    <h3>Liên hệ với chúng tôi ngay hôm nay để được các chuyên gia tư vấn cụ thể nhất về dự án.</h3>
+                </div>
+                <form class="cta-form" id="ctaContactForm">
+                    <input type="tel" name="phone" placeholder="Nhập số điện thoại" required>
+                    <input type="email" name="email" placeholder="Nhập địa chỉ email">
+                    <button type="submit" class="btn btn-accent">ĐĂNG KÝ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="hinh-anh">
+        <div class="container">
+            <h2 class="section-title text-center">HÌNH ẢNH PHỐI CẢNH<br>LONG BIEN CENTRAL</h2>
+            
+            <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-main">
+                    <div class="gallery-item active">
+                        <img src="images/phoicanh1.png" alt="The Matrix One" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/phoicanh2.png" alt="Tiện ích" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/phoicanh3.png" alt="Nội khu" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/phoicanh4.png" alt="Phối cảnh" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/phoicanh5.png" alt="Trung tâm thương mại" class="gallery-image">
+                    </div>
+                </div>
+                
+                <div class="gallery-thumbnails">
+                    <div class="thumbnail active" data-index="0">
+                        <img src="https://chungcuthematrixone.io.vn/wp-content/uploads/2025/04/the-matrix-1024x576-20250404044559-ykwas.jpg" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" data-index="1">
+                        <img src="https://chungcuthematrixone.io.vn/wp-content/uploads/2025/04/mb_0002_r-20250404050130-yoxat.jpg" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail" data-index="2">
+                        <img src="https://chungcuthematrixone.io.vn/wp-content/uploads/2025/04/z6469031367183_997fab759b8f7a4735fe682b416fc19f.jpg" alt="Thumbnail 3">
+                    </div>
+                    <div class="thumbnail" data-index="3">
+                        <img src="https://chungcuthematrixone.io.vn/wp-content/uploads/2025/04/z5921556019547_55d39481988dc602660b9faa522454ce-20241012022557-afq0z.jpg" alt="Thumbnail 4">
+                    </div>
+                    <div class="thumbnail" data-index="4">
+                        <img src="https://chungcuthematrixone.io.vn/wp-content/uploads/2025/04/tttm-cao-cap-20241205041159-ja3pc.jpg" alt="Thumbnail 5">
+                    </div>
+                </div>
+                
+                <button class="gallery-nav gallery-prev" id="galleryPrev">‹</button>
+                <button class="gallery-nav gallery-next" id="galleryNext">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="lien-he">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-video">
+                    <div class="contact-details">
+                        <h2>LONG BIEN CENTRAL</h2>
+                        
+                        <ul class="contact-list">
+                            <li>Hotline CSKH: <a href="tel:0988412823">0988412823</a></li>
+                            <li>Website: <a href="https://chungcuthematrixone.io.vn/">https://chungcuthematrixone.io.vn/</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-form-section">
+                        <div class="contact-form-card">
+                            <h3 class="form-title">NHẬN BÁO GIÁ</h3>
+                            
+                            <form class="contact-form" id="heroContactForm">
+                                <input type="text" name="name" placeholder="Họ và tên" required>
+                                <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                                <div class="form-group">
+                                    <label for="apartment-type-hero">Loại hình quan tâm</label>
+                                    <select name="apartment_type" id="apartment-type-hero" class="form-select" required>
+                                        <option value="studio">Căn hộ 1PN</option>
+                                        <option value="2br">Căn hộ 2PN</option>
+                                        <option value="3br">Căn hộ 3PN</option>
+                                        <option value="3br">Căn hộ 4PN</option>
+                                        <option value="3br">Căn Penthouse</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">Nhận Thông Tin</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 LONG BIEN CENTRAL. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-overlay" onclick="closeModal('contactModal')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('contactModal')">&times;</button>
+            <h3 style="color: white;">Đăng ký tư vấn</h3>
+            <form class="contact-form" id="heroContactForm">
+                <input type="text" name="name" placeholder="Họ và tên" required>
+                <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                <div class="form-group">
+                    <label for="apartment-type-hero">Loại hình quan tâm</label>
+                    <select name="apartment_type" id="apartment-type-hero" class="form-select" required>
+                        <option value="studio">Căn hộ 1PN</option>
+                        <option value="2br">Căn hộ 2PN</option>
+                        <option value="3br">Căn hộ 3PN</option>
+                        <option value="3br">Căn hộ 4PN</option>
+                        <option value="3br">Căn Penthouse</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Nhận Thông Tin</button>
+            </form>
+        </div>
     </div>
-    <div class="copyright">
-        Design by: <a href="https://fb.com/vv.do.0512/" target="_blank">ZyDoo</a>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <div class="floating-btn phone-btn">
+            <a href="tel:0988412823">
+                <span class="phone-icon">📞</span>
+                <span class="phone-text">0988412823</span>
+            </a>
+        </div>
+        <div class="floating-btn zalo-btn">
+            <a href="https://zalo.me/0988412823" target="_blank">
+                <span class="zalo-icon">💬</span>
+            </a>
+        </div>
     </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

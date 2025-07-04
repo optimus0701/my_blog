@@ -1,0 +1,23 @@
+{
+  "name": "the-matrix-one-premium",
+  "version": "1.0.0",
+  "description": "The Matrix One Premium - Premium apartment complex website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server . -p 3000 -o",
+    "start": "http-server . -p 3000",
+    "build": "echo 'Static site - no build process needed'"
+  },
+  "keywords": [
+    "real-estate",
+    "apartment",
+    "premium",
+    "vietnam",
+    "hanoi"
+  ],
+  "author": "The Matrix One Premium",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
