@@ -66,7 +66,7 @@
 
 /* Contact Form Card */
 .contact-form-card {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--white);
     padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
@@ -88,7 +88,7 @@
 
 .form-title {
     text-align: center;
-    color: var(--accent-color);
+    color: var(--gray-100);
     margin-bottom: var(--spacing-md);
     font-size: 1.25rem;
 }

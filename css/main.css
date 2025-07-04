@@ -1,10 +1,10 @@
 /* Main Styles */
 :root {
     /* Colors */
-    --primary-color: #1a365d;
+    --primary-color: #16e00f;
     --secondary-color: #2d5aa0;
     --accent-color: #d69e2e;
-    --success-color: #38a169;
+    --success-color: #109ed6;
     --error-color: #e53e3e;
     --warning-color: #dd6b20;
     --info-color: #3182ce;
@@ -81,7 +81,7 @@
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: var(--spacing-2xl);
     position: relative;
 }
@@ -146,7 +146,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--gray-100);
     backdrop-filter: blur(10px);
     z-index: var(--z-fixed);
     transition: all var(--transition-normal);
@@ -227,7 +227,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    
+    background-color: var(--success-color);
 }
 
 .hero-bg {
@@ -323,7 +323,7 @@ section {
 }
 
 .features {
-    background-color: var(--gray-50);
+    background-color: var(--success-color);
     margin-top: -15%;
 }
 
@@ -338,7 +338,7 @@ section {
 }
 
 .features-content h2 {
-    color: var(--primary-color);
+    color: var(--gray-50);
     margin-bottom: var(--spacing-xl);
 }
 
@@ -359,7 +359,7 @@ section {
     position: absolute;
     left: 0;
     top: var(--spacing-md);
-    color: var(--success-color);
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -396,7 +396,7 @@ section {
 }
 
 .overview-item h4 {
-    color: var(--accent-color);
+    color: black;
     margin-bottom: var(--spacing-md);
     font-size: 1.25rem;
 }
@@ -537,7 +537,7 @@ section {
 
 /* Floor Plans Section */
 .floor-plans {
-    background-color: var(--gray-50);
+    background-color: var(--success-color);
 }
 
 .floor-plans-description {
