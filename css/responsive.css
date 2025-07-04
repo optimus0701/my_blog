@@ -162,8 +162,8 @@
     }
     
     .hero {
-        min-height: 80vh;
-        padding-top: 80px;
+        min-height: 45vh;
+        padding: var(--spacing-3xl) 0;
     }
     
     .hero-content {
@@ -171,11 +171,13 @@
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        max-height: 70%;
     }
     
     .hero-title .highlight {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        padding-top: 2%;
     }
     
     .hero-title .subtitle {
