@@ -383,16 +383,7 @@ window.addEventListener('error', function(e) {
 // Make functions globally available
 window.openModal = openModal;
 window.closeModal = closeModal;
-function setupDelayedCall() {
-    console.log("Trang đã tải xong. Bắt đầu đếm ngược 7 giây... " + isClose);
-    setTimeout(openModal, 7000, "contactModal", 1);
-}
 
-function demo() {
-    console.log("Demo function called");
-}
-
-window.onload = setupDelayedCall;
 
 
 

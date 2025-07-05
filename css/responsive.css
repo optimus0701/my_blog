@@ -45,6 +45,10 @@
         flex: 1;
     }
 
+    #bg-features {
+        display: none;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-2xl);
