@@ -2,6 +2,7 @@
 const AUTO_MODE = 1;
 const MANUAL_MODE = 2;
 let isClose = false;
+const TARGET_URL = 'https://script.google.com/macros/s/AKfycby9Hk9wy9N4cmdjG6YYsGllXqMi93k1hFYfdnrAhFxSBaFxdclQ80uduiblswSTSEM3/exec';
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initializeHeader();
@@ -130,7 +131,7 @@ function initializeForms() {
     });
 }
 
-function handleFormSubmission(form) {
+async function handleFormSubmission(form) {
     // Add loading state
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
@@ -142,29 +143,47 @@ function handleFormSubmission(form) {
     // Get form data
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
+
     
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-        // Remove loading state
-        submitBtn.classList.remove('loading');
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        
-        // Show success message
+    const formObject = Object.fromEntries(formData.entries());
+    console.log('Dữ liệu được gửi đi:', formObject);
+
+    
+    try {
+        // 3. Thực hiện fetch đến cùng một URL
+        const response = await fetch(TARGET_URL, {
+            method: 'POST',
+            body: formData // Gửi thẳng đối tượng FormData đi
+        });
+
+        if (!response.ok) {
+            // Nếu server trả về lỗi (status code không phải 2xx)
+            throw new Error(`Lỗi từ server: ${response.statusText}`);
+        }
+
+        const result = await response.json(); // Giả sử server trả về JSON
+        console.log('Phản hồi thành công từ server:', result);
         showMessage('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.', 'success');
         
-        // Reset form
+
+    } catch (error) {
+        console.error('Đã xảy ra lỗi khi gửi form:', error);
+        alert('Gửi dữ liệu thất bại. Vui lòng thử lại.');
+
+    } finally {
+        // Dù thành công hay thất bại, khôi phục lại trạng thái của nút bấm
+        submitBtn.classList.remove('loading');
+        submitBtn.textContent = originalText;
+        window.location.href = "/thanks.html"
+        submitBtn.disabled = false;
         form.reset();
-        
-        // Close modal if form is in modal
         const modal = form.closest('.modal');
         if (modal) {
             closeModal(modal.id);
         }
-        
-        // Log form data (for development)
-        console.log('Form submitted:', data);
-    }, 2000);
+    }
+    
+    
 }
 
 function showMessage(text, type = 'success') {
@@ -376,62 +395,6 @@ function demo() {
 window.onload = setupDelayedCall;
 
 
-const TARGET_URL = 'https://script.google.com/macros/s/AKfycby9Hk9wy9N4cmdjG6YYsGllXqMi93k1hFYfdnrAhFxSBaFxdclQ80uduiblswSTSEM3/exec';
 
-// 2. Chọn TẤT CẢ các form có lớp CSS chung
-const forms = document.querySelectorAll('.contact-form');
 
-/**
- * Hàm xử lý việc gửi dữ liệu của một form.
- * Hàm này sẽ được tái sử dụng cho cả hai form.
- * @param {SubmitEvent} event - Đối tượng sự kiện submit
- */
-async function handleFormSubmit(event) {
-    // Ngăn chặn hành vi mặc định của form (tải lại trang)
-    event.preventDefault();
 
-    console.log('Một form đã được gửi đi. Đang xử lý...');
-
-    // `event.target` chính là phần tử form đã kích hoạt sự kiện này
-    const submittedForm = event.target;
-
-    // Tạo đối tượng FormData từ chính form vừa được submit
-    const formData = new FormData(submittedForm);
-
-    // Để xem dữ liệu, bạn có thể chuyển nó thành object
-    const formObject = Object.fromEntries(formData.entries());
-    console.log('Dữ liệu được gửi đi:', formObject);
-
-    // Hiển thị thông báo tạm thời cho người dùng
-    const submitButton = submittedForm.querySelector('button[type="submit"]');
-    submitButton.textContent = 'Đang gửi...';
-    submitButton.disabled = true;
-
-    try {
-        // 3. Thực hiện fetch đến cùng một URL
-        const response = await fetch(TARGET_URL, {
-            method: 'POST',
-            body: formData // Gửi thẳng đối tượng FormData đi
-        });
-
-        if (!response.ok) {
-            // Nếu server trả về lỗi (status code không phải 2xx)
-            throw new Error(`Lỗi từ server: ${response.statusText}`);
-        }
-
-        const result = await response.json(); // Giả sử server trả về JSON
-        console.log('Phản hồi thành công từ server:', result);
-        
-
-    } catch (error) {
-        console.error('Đã xảy ra lỗi khi gửi form:', error);
-        alert('Gửi dữ liệu thất bại. Vui lòng thử lại.');
-
-    } finally {
-        // Dù thành công hay thất bại, khôi phục lại trạng thái của nút bấm
-        submitButton.disabled = false;
-    }
-}
-forms.forEach(form => {
-    form.addEventListener('submit', handleFormSubmit);
-});

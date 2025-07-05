@@ -895,3 +895,128 @@ section {
     background: var(--accent-color);
     transform: translateY(-3px);
 }
+
+
+/* === CSS CHO FOOTER === */
+.site-footer {
+    background-color: var(--success-color); /* Màu xanh đậm giống trong ảnh */
+    color: #ffffff;
+    padding: 60px 0;
+}
+.footer-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-grow: 1; /* Cho phép container này co giãn */
+    gap: 30px; /* Tạo khoảng cách giữa các cột, thay thế cho margin */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-info .footer-logo {
+    max-width: 160px; /* Điều chỉnh kích thước logo */
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0 0 0;
+    line-height: 1.7;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.footer-info .company-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-right-content {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-nav-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-col li {
+    margin-bottom: 15px;
+}
+
+.footer-nav-col a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-col a:hover {
+    text-decoration: underline;
+    color: #f0ad4e; /* Màu khi hover */
+}
+
+.footer-social .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    background-color: #ffffff;
+    color: #002349;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.875rem;
+    color: #c0c0c0;
+}
+
+.footer-legal a {
+    color: #c0c0c0;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}

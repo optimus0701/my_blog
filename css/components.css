@@ -526,3 +526,8 @@
     background: var(--white);
     color: var(--gray-700);
 }
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}

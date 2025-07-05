@@ -178,6 +178,8 @@
     .hero-title {
         font-size: 1.5rem;
         max-height: 70%;
+        margin-bottom: -10%;
+        margin-top: -5%;
     }
     
     .hero-title .highlight {
